@@ -1,0 +1,16 @@
+.layout-with-sidebar {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .page-content {
+    flex-grow: 1;
+    padding: 2rem;
+    margin-left: 250px; 
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.open ~ .page-content {
+    margin-left: 250px;
+  }
+  

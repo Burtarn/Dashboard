@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em; 
+}
