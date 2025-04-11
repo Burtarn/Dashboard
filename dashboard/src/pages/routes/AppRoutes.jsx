@@ -13,7 +13,7 @@ const Layout = lazy(() => import('../../pages/Layout/Layout'));
 const NotFound = lazy(() => import('../../pages/NotFound'));
 
 const AppRoutes = () => {
-    const { isAuthenticated } = useAuth(); // Använd useAuth här
+    const { isAuthenticated } = useAuth(); 
 
     return (
         <Suspense fallback={<div><Spinner /></div>}>

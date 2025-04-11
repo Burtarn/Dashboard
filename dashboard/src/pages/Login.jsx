@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/login.css'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Login = () => {
 
         const response = await fetch('http://localhost:3000/login', {
             method: 'POST',
-            credentials: 'include',  // Viktigt för att skicka cookies
+            credentials: 'include', 
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -20,7 +21,6 @@ const Login = () => {
 
         if (response.ok) {
             const user = await response.json();
-            // Vi lagrar inte användardata här, sessionen hanteras av backend
             if (user.role === 'admin') {
                 navigate('/users');
             } else {
@@ -32,9 +32,9 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Logga in</h2>
-            <form onSubmit={handleLogin}>
+        <div className="login-container">
+            <form onSubmit={handleLogin} className="login-form">
+                <h2>Logga in</h2>
                 <div>
                     <label>Användarnamn:</label>
                     <input
@@ -53,7 +53,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button type="submit">Logga in</button>
+                <button className='submitBtn' type="submit">Logga in</button>
             </form>
         </div>
     );
