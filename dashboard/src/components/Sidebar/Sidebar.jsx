@@ -36,20 +36,20 @@ import {
         <div>
 
         <button onClick={toggleSidebar} className="toggle-button">
-            {isOpen ? 'Close' : 'Open'} Menu
+            {isOpen ? 'Stäng' : 'Öppna'} Meny
         </button>
 
         <div className={`sidebar ${isOpen ? 'open' : ''}`}>
             <button className="close-button" onClick={closeSidebar}>✖</button>
             {isOpen && <h2 className="company-name">Dashboard</h2>}
             <ul>
-            <li><Link to="/home" onClick={closeSidebar}><FaHome /> Home</Link></li>
-            <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Users</Link></li>
-            <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Settings</Link></li>
-            <li><Link to="/statistics" onClick={closeSidebar}><FaChartBar /> Statistics</Link></li>
+            <li><Link to="/home" onClick={closeSidebar}><FaHome /> Hem</Link></li>
+            <li><Link to="/users" onClick={closeSidebar}><FaUsers /> Användare</Link></li>
+            <li><Link to="/settings" onClick={closeSidebar}><FaCog /> Inställningar</Link></li>
+            <li><Link to="/statistics" onClick={closeSidebar}><FaChartBar /> Statistik</Link></li>
             <li>
                 <button onClick={handleLogout} className="logout-button">
-                <FaSignOutAlt /> Logout
+                <FaSignOutAlt /> Logga ut
                 </button>
             </li>
             </ul>
