@@ -5,6 +5,15 @@ const app = express();
 
 
 require('dotenv').config();
+console.log('🔍 MONGO_URI:', process.env.MONGO_URI);
+
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGO_URI, {
+})
+.then(() => console.log('✅ Ansluten till MongoDB'))
+.catch((err) => console.error('❌ MongoDB-anslutningsfel:', err));
+
 
 app.use(cors({
     origin: 'http://localhost:5173', 
