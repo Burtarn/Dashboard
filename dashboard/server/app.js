@@ -9,6 +9,7 @@ const setupSwagger = require('./swagger/swagger');
 const myMiddleware = require('./middleware/myMiddleware');
 const authRoutes = require('./routes/AuthRoutes');
 const userRoutes = require('./routes/UserRoutes');
+const statisticsRoutes = require('./routes/StatisticRoutes');
 
 const app = express();
 require('dotenv').config();
@@ -38,5 +39,6 @@ app.get('/api/active', (req, res) => {
 });
 app.use(authRoutes);
 app.use(userRoutes);
+app.use('/api', statisticsRoutes);
 
 module.exports = app;
