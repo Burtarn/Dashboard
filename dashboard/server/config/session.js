@@ -5,10 +5,10 @@ const sessionOptions = (secret) => ({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        secure: false,      // Sätt till true om du använder HTTPS
+        secure: false,     
         httpOnly: true,
-        maxAge: 60 * 60 * 1000, // 1 timme
-        sameSite: 'Strict', // Förhindra tredjepartsförfrågningar
+        maxAge: 60 * 60 * 1000, 
+        sameSite: 'Strict', 
     },
 });
 
