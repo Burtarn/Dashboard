@@ -40,9 +40,9 @@ app.get('/api/active', (req, res) => {
     res.json('Servern är aktiv.');
 });
 
-app.use(authRoutes);  // Auth routes
-app.use(userRoutes);  // User routes
-app.use(profileRoutes);  // Lägg till profilrutter här
-app.use('/api', statisticsRoutes);  // Statistikrutter
+app.use(authRoutes);  
+app.use(userRoutes); 
+app.use(profileRoutes);  
+app.use('/api', statisticsRoutes);  
 
 module.exports = app;
