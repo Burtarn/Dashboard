@@ -6,6 +6,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [msg, setMsg] = useState('');
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -27,7 +28,7 @@ const Login = () => {
                 navigate('/home');
             }
         } else {
-            alert('Inloggning misslyckades');
+            setMsg('Felaktigt användarnamn eller lösenord.')
         }
     };
 
@@ -53,6 +54,7 @@ const Login = () => {
                         required
                     />
                 </div>
+                <p className='error-msg'>{msg}</p>
                 <button className='submitBtn' type="submit">Logga in</button>
             </form>
         </div>

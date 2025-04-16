@@ -25,6 +25,12 @@ h2 {
     margin-bottom: 20px;
 }
 
+.error-msg {
+    color: red;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
 .login-form div {
     margin-bottom: 20px;
 }
