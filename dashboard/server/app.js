@@ -37,6 +37,8 @@ setupSwagger(app);
 app.get('/api/active', (req, res) => {
     res.json('Servern är aktiv.');
 });
+
+
 app.use(authRoutes);
 app.use(userRoutes);
 app.use('/api', statisticsRoutes);
