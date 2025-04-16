@@ -10,6 +10,8 @@ const myMiddleware = require('./middleware/myMiddleware');
 const authRoutes = require('./routes/AuthRoutes');
 const userRoutes = require('./routes/UserRoutes');
 const statisticsRoutes = require('./routes/StatisticRoutes');
+const profileRoutes = require('./routes/ProfileRoutes'); 
+
 
 const app = express();
 require('dotenv').config();
@@ -38,9 +40,9 @@ app.get('/api/active', (req, res) => {
     res.json('Servern är aktiv.');
 });
 
-
-app.use(authRoutes);
-app.use(userRoutes);
-app.use('/api', statisticsRoutes);
+app.use(authRoutes);  // Auth routes
+app.use(userRoutes);  // User routes
+app.use(profileRoutes);  // Lägg till profilrutter här
+app.use('/api', statisticsRoutes);  // Statistikrutter
 
 module.exports = app;
