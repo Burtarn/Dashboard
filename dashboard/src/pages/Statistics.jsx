@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/Statistics.css'
 
 const Statistics = () => {
   return (
-    <div>Statistics</div>
+    <div className='statistics-container'>Statistics</div>
   )
 }
 
