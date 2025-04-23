@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Profile = require('../models/Profile'); // Importera Profile-modellen
+const Profile = require('../models/Profile'); 
 
 // GET – Hämta alla profiler
 /**
@@ -18,7 +18,7 @@ const Profile = require('../models/Profile'); // Importera Profile-modellen
  *               items:
  *                 $ref: '#/components/schemas/Profile'
  */
-router.get('/api/profiles', async (req, res) => {
+router.get('/', async (req, res) => { 
   try {
     const profiles = await Profile.find();
     res.json(profiles);
