@@ -5,6 +5,41 @@ const Statistic = require('../models/Statistics');
 
 /**
  * @swagger
+ * components:
+ *   schemas:
+ *     Statistic:
+ *       type: object
+ *       required:
+ *         - date
+ *         - month
+ *         - revenue
+ *         - estimated
+ *         - productsSold
+ *       properties:
+ *         _id:
+ *           type: string
+ *         date:
+ *           type: string
+ *           example: "2024-11"
+ *         month:
+ *           type: string
+ *         revenue:
+ *           type: number
+ *         estimated:
+ *           type: number
+ *         productsSold:
+ *           type: integer
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *         updatedAt:
+ *           type: string
+ *           format: date-time
+ */
+
+
+/**
+ * @swagger
  * /api/statistics:
  *   get:
  *     summary: Hämta all statistik
