@@ -1,0 +1,76 @@
+    .statistics-container {
+        margin-left: 50px; 
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.6s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .statistics-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .statistics-table-wrapper {
+        overflow-x: auto;
+    }
+    
+    .statistics-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+    
+    .statistics-table th,
+    .statistics-table td {
+        padding: 14px 16px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .statistics-table th {
+        background-color: #f9fafb;
+        font-weight: 600;
+    }
+    
+    .statistics-table tr:hover {
+        background-color: #f1f5f9;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .indicator-cell {
+            position: relative;
+        }
+        
+        .indicator-dot {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 18px; /* Justera storlek på ikonen */
+            color: #666; /* Default color for the dot */
+        }
+        
+        .indicator-dot i {
+            margin-left: 8px;
+            font-size: 16px; /* Adjust size of the icon */
+            cursor: pointer;
+        }
+        
+        .indicator-dot.green i {
+            color: #22c55e; /* Grön ikon */
+        }
+        
+        .indicator-dot.red i {
+            color: #ef4444; /* Röd ikon */
+        }
+        
+        

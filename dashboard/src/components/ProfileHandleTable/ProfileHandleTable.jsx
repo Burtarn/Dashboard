@@ -38,7 +38,6 @@ if (error) {
   return <p>Error i hämtning av data!</p>
 }
 
-
   return (
     <>
     <div className="main-content">
