@@ -76,3 +76,11 @@ input:focus {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+.errMsg {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    margin-bottom: 10px;
+}

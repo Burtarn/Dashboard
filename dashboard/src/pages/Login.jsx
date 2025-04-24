@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/login.css'
 
@@ -6,7 +6,16 @@ const Login = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [msg, setMsg] = useState('');
+    const [errorMsg, setErrorMsg] = useState('');
+
+    useEffect(() => {
+        if (errorMsg) {
+            const timer = setTimeout(() => {
+                setErrorMsg('');
+            }, 2000); 
+            return () => clearTimeout(timer);
+        }
+    }, [errorMsg]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -28,7 +37,7 @@ const Login = () => {
                 navigate('/home');
             }
         } else {
-            setMsg('Felaktigt användarnamn eller lösenord.')
+            setErrorMsg('Felaktigt användarnamn eller lösenord');
         }
     };
 
@@ -54,7 +63,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <p className='error-msg'>{msg}</p>
+                {errorMsg && <p className='errMsg'>{errorMsg}</p>}
                 <button className='submitBtn' type="submit">Logga in</button>
             </form>
         </div>
