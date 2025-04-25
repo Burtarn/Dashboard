@@ -1,15 +1,17 @@
 import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './hooks/useAuth';
-import AppRoutes from './pages/routes/AppRoutes'
+import { ThemeProvider } from './context/ThemeContext';  // Importera ThemeProvider
+import AppRoutes from './pages/routes/AppRoutes';
 import 'font-awesome/css/font-awesome.min.css';
-
 
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
+      <ThemeProvider>  {/* Här kapslar vi in ThemeProvider */}
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </ThemeProvider>
     </AuthProvider>
   );
 }

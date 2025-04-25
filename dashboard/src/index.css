@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +13,19 @@ h1 {
 .logo {
   font-family: 'Montserrat', sans-serif;
   font-size: 2em; 
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+
+.darkModeBtn {
+  align-items: center;
 }
