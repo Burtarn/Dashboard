@@ -25,7 +25,7 @@ const StatisticHandleTable = () => {
   }, []);
 
   if (loading) return <Spinner />;
-  if (error) return <p>Error i hämtning av data!</p>;
+  if (error) return <div>Error i hämtning av data!</div>;
 
   return (
     <div className="statistics-container fade-in">
@@ -39,7 +39,7 @@ const StatisticHandleTable = () => {
               <th>Sålda produkter</th>
               <th>Prognos</th>
               <th>Intäkter</th>
-              <th>Indikator</th> {/* Ny kolumn */}
+              <th>Indikator</th>
             </tr>
           </thead>
           <tbody>

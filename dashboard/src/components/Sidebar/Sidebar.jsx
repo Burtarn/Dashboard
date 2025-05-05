@@ -15,7 +15,7 @@ import '../../components/Sidebar/Sidebar.css'
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { logout } = useAuth();  // Hämta logout från context eller hooks
+    const { logout } = useAuth();  
     const navigate = useNavigate();
 
     const toggleSidebar = () => {
@@ -28,17 +28,17 @@ const Sidebar = () => {
 
     const handleLogout = async () => {
         try {
-            // Skicka utloggningsbegäran till backend
+
             const response = await fetch('http://localhost:3000/logout', {
                 method: 'POST',
-                credentials: 'include', // Skicka cookies för att hantera sessionen
+                credentials: 'include', 
             });
 
             if (response.ok) {
-                // Logga ut på frontend
-                logout();  // Anropa logout från din auth-hook eller context
+
+                logout();  
                 closeSidebar();
-                navigate('/');  // Omdirigera till login
+                navigate('/'); 
             } else {
                 alert('Kunde inte logga ut');
             }

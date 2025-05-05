@@ -7,7 +7,7 @@ import 'font-awesome/css/font-awesome.min.css';
 function App() {
   return (
     <AuthProvider>
-      <ThemeProvider>  {/* Här kapslar vi in ThemeProvider */}
+      <ThemeProvider>  
         <BrowserRouter>
           <AppRoutes />
         </BrowserRouter>
